@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Source+Sans+Pro" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.1.js" charset="utf-8"></script>
+    <script src="js/scripts.js" charset="utf-8"></script>
+    <title>Pig Dice Game</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+     <h3 style="text-align: center">Pig Dice Game</h3>
+   </nav>
+   <img src="Images/alex.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">
+   <h2 style="text-align: center">Are u ready to be play</h2>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 game-info">
+          <h4>About Pig Dice</h4>
+          <h5>Pig Dice is a two-person game of chance. During each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold". The other rules are:</h5>
+          <ul>
+            <li>If the player rolls a 1, they score nothing and it becomes the next player's turn.</li>
+            <li>If the player rolls any other number, it is added to their turn total and the player's turn continues.</li>
+            <li>If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.</li>
+            <li><strong>The first player to score 100 or more points wins.</strong></li>
+          </ul>
+        </div>
+        <div class="col-sm-6 player-setup">
+          <h3>Player Setup</h3>
+          <form id="signup-form">
+            <div class="form-group">
+              <label for="player-one-signup">Player One</label>
+              <input id="player-one-signup" class="form-control" type="text" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+              <label for="player-two-signup">Player Two</label>
+              <input id="player-two-signup" class="form-control" type="text" placeholder="Enter name">
+            </div>
+            <button class="btn btn-primary" type="submit">Play</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+
+      <div class="container game">
+        <div class="row">
+          <div class="col-xs-4">
+            <h3>Player One:</h3>
+            <h4 id="player-one-name"></h4>
+            <p>Score:</p>
+            <p><span class="p1-total-score"></span></p>
+          </div>
+
+          <div class="col-xs-4">
+            <h3>Rolled Dice</h3>
+            <h1 id="rolled-number">#</h1>
+            <h3>Possible Points</h3>
+            <h1 id="rolled-total">0</h1>
+            <button id="roll" class="btn btn-primary">Roll</button>
+            <button id="hold" class="btn" disabled="true">Hold</button>
+            <br>
+            <br>
+            <p id="player-msg"></p>
+            <p id="player-turn-score"></p>
+          </div>
+
+          <div class="col-xs-4">
+            <h3>Player Two:</h3>
+            <h4 id="player-two-name"></h4>
+            <p>Score:</p>
+            <p><span class="p2-total-score"></span></p>
+          </div>
+        </div>
+      </div>
+    </body>
+  </html>
